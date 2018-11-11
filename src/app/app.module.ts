@@ -6,6 +6,8 @@ import { UiModule } from './ui/ui.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { routingModule } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     BrowserModule,
-    UiModule
+    UiModule,
+    routingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
