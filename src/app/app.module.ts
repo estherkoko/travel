@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LocationsComponent } from './locations/locations.component';
 
 const routes: Routes = [
   { path: 'service', component: ServicesComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
     HomeComponent,
     ServicesComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LocationsComponent
   ],
   imports: [
     BrowserModule,

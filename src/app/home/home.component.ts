@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlegnaPlacesService } from '../../providers/alegna-places.service'
+import { AlegnaPlacesService } from '../../providers/alegna-places.service';
 
 @Component({
   selector: 'app-home',

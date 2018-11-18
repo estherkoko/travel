@@ -53,22 +53,5 @@
       </div>
     </div>
   </div>
-</div>  
-<div class="container p-5">
-  <h1>Alegna Travels & Events</h1>
-  Alegna Travel & Events is a travel and events company that caters to 
-  <p>corporate and leisure clients. It was founded by Angela Casara in 2015.</p>
-
 </div>
-<div class="row py-4 w-100 ml-0" >
-  
-  <div class="col-md-3" *ngFor="let places of myPlaces">
-   <img src='{{places.image}}' class="alegna-img w-100"/>
-          <div class="pl-4 bottom-left text-white font-weight-bold">
-            {{places.name}}
-            <p>{{places.location}}</p>
-          </div>
-      
-    </div>
- 
-</div>
+<app-locations></app-locations>
