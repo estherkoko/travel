@@ -1,3 +1,74 @@
-<p>
-  home works!
-</p>
+<div class="tophero text-white">
+  <!-- Content here -->
+ <div class="container text-center pt-5">
+   <h1 class="display-3 content-middle ">Time to take a Break</h1>
+   <p class="text-center font-weight-bold h5 spacing">Let's help manage your travel and leisure experience</p>
+
+   <div class="contact-layout py-3">
+      <form class="form-inline form-noborder">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="fullname" class="sr-only">Fullname</label>
+            <input type="text" class="form-control" id="Fullname" placeholder="Fullname">
+          </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="email" class="sr-only">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="subject" class="sr-only">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Subject">
+          </div>
+            <button type="submit" class="btn btn-primary mb-2 col ml-5 align-self-end bg-warning">Let's Talk</button>
+      
+        <div class="form-group col-10 mt-3">
+            <label for="message" class="sr-only">Message</label>
+            <input type="text" class="form-control col-lg-10" id="message" placeholder="Message">
+          </div>
+      </form>
+   </div>
+   <div class="row mt-4 services">
+      <div class="col-sm-4 text-left">
+        01 <span class="font-weight-bold">Flight Booking</span>
+        <p class="mt-2">
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor.  
+          Ut enim ad minim veniam
+        </p>
+      </div>
+      <div class="col-sm-4 text-left">
+        02 <span class="font-weight-bold">Holiday Packages</span>
+        <p class="mt-2">
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor.  
+          Ut enim ad minim veniam
+        </p>
+      </div>
+      <div class="col-sm-4 text-left">
+        03 <span class="font-weight-bold">Accomodation Arrangements</span>
+        <p class="mt-2">
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor.  
+          Ut enim ad minim veniam
+        </p>
+      </div>
+    </div>
+  </div>
+</div>  
+<div class="container p-5">
+  <h1>Alegna Travels & Events</h1>
+  Alegna Travel & Events is a travel and events company that caters to 
+  <p>corporate and leisure clients. It was founded by Angela Casara in 2015.</p>
+
+</div>
+<div class="row py-4 w-100 ml-0" >
+  
+  <div class="col-md-3" *ngFor="let places of myPlaces">
+   <img src='{{places.image}}' class="alegna-img w-100"/>
+          <div class="pl-4 bottom-left text-white font-weight-bold">
+            {{places.name}}
+            <p>{{places.location}}</p>
+          </div>
+      
+    </div>
+ 
+</div>
