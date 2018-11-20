@@ -11,6 +11,7 @@ import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LocationsComponent } from './locations/locations.component';
+import { ServicetypeComponent } from './servicetype/servicetype.component';
 
 const routes: Routes = [
   { path: 'service', component: ServicesComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
     ServicesComponent,
     AboutComponent,
     ContactComponent,
-    LocationsComponent
+    LocationsComponent,
+    ServicetypeComponent
   ],
   imports: [
     BrowserModule,

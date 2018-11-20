@@ -1,0 +1,26 @@
+<div class="bg-light text-center py-5 services">
+    <div class="container">
+           <h2 class="font-weight-bold mt-4">Our World Class Service</h2> 
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+            <p class="spacing">tempor. Ut enim ad minim veniam</p>
+       
+    </div>
+    <div class="container">
+    <div class="bg-white shadow row service my-5" *ngFor="let type of serviceType"> 
+        <div class="col-sm-4 pr-0 pl-0">
+             <img src='{{type.image}}' class="img-fluid"/>
+        </div>
+        <div class="col-sm-8">
+            <h3 class="font-weight-bold text-left mt-3">{{type.name}}</h3>
+           
+           <p class="text-left">
+                {{type.details}}
+                <br>
+                <button type="submit" class="btn btn-primary mt-2 font-weight-bold align-self-end bg-warning">Explore More</button>
+
+           </p> 
+
+        </div>  
+     </div>
+    </div>
+</div>
