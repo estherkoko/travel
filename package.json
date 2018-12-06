@@ -26,7 +26,6 @@
     "font-awesome": "^4.7.0",
     "hoek": "^6.1.2",
     "rxjs": "^6.0.0",
-    "timespan": "^2.3.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
