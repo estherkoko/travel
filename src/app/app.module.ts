@@ -13,7 +13,7 @@ import { LocationsComponent } from './locations/locations.component';
 import { ServicetypeComponent } from './servicetype/servicetype.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'service', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent }
