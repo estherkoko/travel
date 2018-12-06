@@ -14,6 +14,7 @@ import { ServicetypeComponent } from './servicetype/servicetype.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'service', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent }

@@ -1,15 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-fixed-top">
+
+    <a href="#" routerLinkActive="active" class="navbar-brand"><img src="../../../assets/img/logo.png"/></a>
+
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars fa-2x"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="nav navbar-nav">
-                <a routerLink="/" routerLinkActive="active" class="nav-item nav-link">Home </a>      
-                <a routerLink="/service" routerLinkActive="active" class="nav-item nav-link ">Services</a>
-                <a routerLink="/about" routerLinkActive="active" class="nav-item nav-link ">About Us</a>
-                <a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link" >Contact Us</a>
-      </div>
+      <ul class="nav navbar-nav">
+                <li><a routerLink="/home" routerLinkActive="active" class="nav-item nav-link">Home</a></li>     
+                <li><a routerLink="/service" routerLinkActive="active" class="nav-item nav-link">Service</a></li>  
+                <li><a routerLink="/about" routerLinkActive="active" class="nav-item nav-link">About</a></li>  
+                <li><a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">Contact</a></li>  
+            
+      </ul>
   </div>
 
 </nav>
