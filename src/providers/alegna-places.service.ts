@@ -10,7 +10,7 @@ export class AlegnaPlacesService {
     {image: '../../assets/img/durban.jpg', name: 'Moses Mabhida Stadium', location: 'Durban'},
     {image: '../../assets/img/bokap.jpg', name: 'Bo-Kaap Museum', location: 'Cape Town'},
     {image: '../../assets/img/elephant.jpg', name: 'Elephant National Park', location: 'Addo'},
-    {image: '../../assets/img/cave.jpg', name: 'Cradle of Humankind', location: 'Johannesburg'}
+    {image: '../../assets/img/beach.jpg', name: 'Sun City', location: 'Rustenburg'}
   ];
 
   services = [
