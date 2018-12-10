@@ -30,8 +30,10 @@
         </div>
         <div class="col-md-6 shadow p-5 ">
             <h2 class="text-center pb-4 font-weight-bold">LET'S WORK TOGETHER</h2>
-            <form name="contact" method="POST" netlify>
-
+            <form name="contact" method="POST" netlify-honeypot="bot-field" netlify>
+                <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="fullname">Fullname</label>
