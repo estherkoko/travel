@@ -53,11 +53,26 @@
                     </div>
                   
                     <div class="form-group col-6 offset-3 md-12 pt-3">
-                        <button type="submit" class="btn btn-warning text-white btn-block rounded-0">Submit Now</button>
+                        <button type="submit" class="btn btn-warning text-white btn-block rounded-0" data-toggle="modal" data-target="#emailConfirmation">
+                            Submit Now
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
+      <!-- Modal -->
+      <div class="modal fade" id="emailConfirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="../../assets/img/happymail.png" style="height:300px"/>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
   
