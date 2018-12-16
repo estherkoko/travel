@@ -11,15 +11,13 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LocationsComponent } from './locations/locations.component';
 import { ServicetypeComponent } from './servicetype/servicetype.component';
-import { SuccessComponent } from './success/success.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'service', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'success', component: SuccessComponent }
+  { path: 'contact', component: ContactComponent }
 
 ];
 @NgModule({
@@ -30,8 +28,7 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactComponent,
     LocationsComponent,
-    ServicetypeComponent,
-    SuccessComponent
+    ServicetypeComponent
   ],
   imports: [
     UiModule,
