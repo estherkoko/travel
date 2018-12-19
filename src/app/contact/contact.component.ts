@@ -9,6 +9,7 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
+  contact: Object = {};
   constructor() { }
 
   ngOnInit() {
