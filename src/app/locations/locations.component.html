@@ -6,17 +6,18 @@
     <p>corporate and leisure clients. It was founded by Angela Casara in 2015.</p>
 
   </div>
-  <div class="container">
-  <div class="row py-2">
+
+  <div class="bg-light p-4">
+  <div class="row py-2 ">
    
-    <div class="col-lg-3 md-12 py-3" *ngFor="let places of myPlaces">
-      <img src='{{places.image}}' class="alegna-img img-fluid"/>
+    <div class="col-lg-3 md-12 py-3" *ngFor="let places of myPlaces ">
+      <img src='{{places.image}}' class="alegna-img img-fluid w-100"/>
       <div class="pl-4 bottom-left text-white font-weight-bold">
         {{places.name}}
         <p>{{places.location}}</p>
       </div>
-
+    </div>
     </div>
   </div>
-  </div>
+ 
 </div>

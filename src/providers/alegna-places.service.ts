@@ -9,8 +9,8 @@ export class AlegnaPlacesService {
   places = [
     {image: '../../assets/img/durban.jpg', name: 'Moses Mabhida Stadium', location: 'Durban'},
     {image: '../../assets/img/bokap.jpg', name: 'Bo-Kaap Museum', location: 'Cape Town'},
-    {image: '../../assets/img/elephant.jpg', name: 'Elephant National Park', location: 'Addo'},
-    {image: '../../assets/img/beach.jpg', name: 'Sun City', location: 'Rustenburg'}
+    {image: '../../assets/img/animal.jpg', name: 'Elephant National Park', location: 'Addo'},
+    {image: '../../assets/img/bushmans.jpeg', name: 'Bushmans Neck', location: 'Underberg'}
   ];
 
   services = [
