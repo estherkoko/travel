@@ -9,7 +9,12 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  contact: Object = {};
+  contact: {
+    fullname:string,
+    email:  string,
+    subject:string
+    message:string
+  };
   constructor() { }
 
   ngOnInit() {

@@ -1,11 +1,4 @@
 <div class="top-hero py-5 text-white">
-
-    <h1 class="text-center top-hero-text">CONTACT</h1>
-    <p class="text-center ">
-        Do you have any request or you want to know more about us? <br>
-        Kindly do send us an email by filling in the form below and we'll get back to you as soon as we receive your
-        email.
-    </p>
 </div>
 <div>
 <div class="container pt-5">
@@ -15,9 +8,9 @@
             <h1 class="font-weight-bold text-white pb-3">HELLO.</h1>
             <div class="leftborder pl-3 text-white">
                 <p class="breakword">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor.
-                    Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur <br>
+                    Do you have any request or you want to know more about Alegna?
+                    Kindly do send us an email by filling in the form below and 
+                    we'll get back to you as soon as we receive your email. <br>
                 </p>
                 <p><i class="fas fa-phone"></i> +27 (11) 038 1220<br>
                     <i class="fas fa-phone"></i> +27 (84) 535 8857</p>
@@ -30,26 +23,26 @@
         </div>
         <div class="col-md-6 shadow p-5 ">
             <h2 class="text-center pb-4 font-weight-bold">LET'S WORK TOGETHER</h2>
-            <form #contactForm="ngForm" (ngSubmit) ="onContactSubmit()"  id="contact-form" name="contact">
+            <form #contactForm="ngForm" (ngSubmit) ="onContactSubmit(contactForm)"  id="contact-form" name="contact">
                 <p hidden class="u-visually-hidden">
                     <label>Don’t fill this out if you're human: <input type="hidden" name="contact_number"/></label>
                 </p>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="fullname">Fullname</label>
-                        <input type="text" name="fullname" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your fullname" [(ngModel)]="contact.fullname" required>
+                        <input type="text" name="fullname" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your fullname" ngModel required>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="email">Email address</label>
-                        <input type="email" name="email" email= "true" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your email address" [(ngModel)]="contact.email" required>
+                        <input type="email" name="email" email= "true" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your email address" ngModel required>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="subject">Subject</label>
-                        <input type="text" name="subject" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter subject of your email" [(ngModel)]="contact.subject" required>
+                        <input type="text" name="subject" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter subject of your email" ngModel required>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="message">Message</label>
-                        <textarea type="text" name="message" class="form-control  border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0 pb-5" placeholder="Start writing" [(ngModel)]="contact.message" required></textarea>
+                        <textarea type="text" name="message" class="form-control  border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0 pb-5" placeholder="Start writing" ngModel required></textarea>
                     </div>
                   
                     <div class="form-group col-6 offset-3 md-12 pt-3">
