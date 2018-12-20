@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
-
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-contact',
@@ -9,16 +9,11 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  contact: {
-    fullname:string,
-    email:  string,
-    subject:string
-    message:string
-  };
+ 
   constructor() { }
 
   ngOnInit() {
   }
 
- 
+
 }
