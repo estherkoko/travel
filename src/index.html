@@ -28,7 +28,10 @@
           event.preventDefault();
           this.contact_number.value = Math.random() * 100000 | 0;
           emailjs.sendForm('alegna_service', 'contact_form', this);
+          document.getElementById("contact-form").reset();
+
       });
+
   }
 </script>
 </html>
