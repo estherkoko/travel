@@ -15,5 +15,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-
+ onContactSubmit(form:NgForm){
+   form.reset();
+ }
 }
