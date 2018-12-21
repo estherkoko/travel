@@ -22,37 +22,48 @@
 
         </div>
         <div class="col-md-6 shadow p-5 ">
-            <h2 class="text-center pb-4 font-weight-bold">LET'S WORK TOGETHER</h2>
-            <form (ngSubmit)="onContactSubmit(contactForm)" #contactForm="ngForm" id="contact-form">
-                <p hidden class="u-visually-hidden">
-                    <label>Don’t fill this out if you're human: <input type="hidden" name="contact_number"/></label>
-                </p>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="fullname">Fullname</label>
-                        <input id="fullname" type="text" name="fullname" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your fullname" ngModel class="validate form-control" required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="email">Email address</label>
-                        <input id="email" type="email" name="email" email= "true" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your email address" ngModel class="validate form-control" required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="subject">Subject</label>
-                        <input id="subject" type="text" name="subject" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter subject of your email" ngModel class="validate form-control" required>
-                    </div>
+            <div *ngIf="senderName !== '' && !isLoading" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hi {{senderName}}</strong> Thanks for your message, we will get back to you very soon!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div [hidden]="!isLoading" class="text-center p-5">
+                <img src="https://loading.io/spinners/spinner/lg.ajax-spinner-preloader.gif"/>
+            </div>
+            <div [hidden]="isLoading">
+                <h2 class="text-center pb-4 font-weight-bold">LET'S WORK TOGETHER</h2>
+                <form (ngSubmit)="onContactSubmit(contactForm)" #contactForm="ngForm" id="contact-form">
+                    <p hidden class="u-visually-hidden">
+                        <label>Don’t fill this out if you're human: <input type="hidden" name="contact_number"/></label>
+                    </p>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="fullname">Fullname</label>
+                            <input id="fullname" type="text" name="fullname" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your fullname" ngModel class="validate form-control" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="email">Email address</label>
+                            <input id="email" type="email" name="email" email= "true" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter your email address" ngModel class="validate form-control" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="subject">Subject</label>
+                            <input id="subject" type="text" name="subject" class="form-control border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0" placeholder="Enter subject of your email" ngModel class="validate form-control" required>
+                        </div>
 
-                    <div class="form-group col-md-12">
-                        <label for="message">Message</label>
-                        <textarea id="message" type="text" name="message" class="form-control  border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0 pb-5" placeholder="Start writing" ngModel class="validate form-control" required></textarea>
+                        <div class="form-group col-md-12">
+                            <label for="message">Message</label>
+                            <textarea id="message" type="text" name="message" class="form-control  border-left-0 border-right-0 border-top-0 border-bottom rounded-0 shadow-none pl-0 pb-5" placeholder="Start writing" ngModel class="validate form-control" required></textarea>
+                        </div>
+                    
+                        <div class="form-group col-6 offset-3 md-12 pt-3">
+                            <button type="submit" class="btn btn-warning text-white btn-block rounded-0" [disabled]="!contactForm.valid">
+                                Submit Now
+                            </button>
+                        </div>
                     </div>
-                  
-                    <div class="form-group col-6 offset-3 md-12 pt-3">
-                        <button type="submit" class="btn btn-warning text-white btn-block rounded-0" [disabled]="!contactForm.valid">
-                            Submit Now
-                        </button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
       <!-- Modal -->
       <div class="modal fade" id="emailConfirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
