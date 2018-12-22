@@ -22,16 +22,16 @@
 
         </div>
         <div class="col-md-6 shadow p-5 ">
-            <div *ngIf="senderName !== '' && !isLoading" class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Hi {{senderName}}</strong> Thanks for your message, we will get back to you very soon!
+            <div *ngIf="contactService.senderName !== '' && !contactService.isLoading" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hi {{contactService.senderName}}</strong> Thanks for your message, we will get back to you very soon!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div [hidden]="!isLoading" class="text-center p-5">
+            <div [hidden]="!contactService.isLoading" class="text-center p-5">
                 <img src="https://loading.io/spinners/spinner/lg.ajax-spinner-preloader.gif"/>
             </div>
-            <div [hidden]="isLoading">
+            <div [hidden]="contactService.isLoading">
                 <h2 class="text-center pb-4 font-weight-bold">LET'S WORK TOGETHER</h2>
                 <form (ngSubmit)="onContactSubmit(contactForm)" #contactForm="ngForm" id="contact-form">
                     <p hidden class="u-visually-hidden">

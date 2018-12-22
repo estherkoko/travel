@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import * as emailjs from 'emailjs-com';
+import { ContactService } from 'src/providers/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,34 +9,20 @@ import * as emailjs from 'emailjs-com';
 })
 export class ContactComponent implements OnInit {
 
-  isLoading: boolean = false;
-  senderName: String = '';
+  //isLoading: boolean = false;
+  //sendMail: any;
 
-  constructor() { }
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() {
   }
 
   onContactSubmit(contactForm: any) {
-    this.isLoading = true;
-    this.senderName = contactForm.value.fullname;
-
-    emailjs.sendForm('alegna_service', 'contact_form', '#contact-form', 'user_QmgUSDLy2M8ifZ5i28u62')
-      .then((response) => {
-        this.isLoading = false;
-        console.log('SUCCESS!', response.status, response.text);
-        this.hideAlertAfterSeconds(2000);
-      }, (err) => {
-        this.isLoading = false;
-        console.log('FAILED...', err);
-      });
-
+    this.contactService.isLoading = true;
+    this.contactService.senderName = contactForm.value.fullname;
+    this.contactService.sendEmail();
     contactForm.reset();
   }
 
-  hideAlertAfterSeconds(milliseconds: number) {
-    setTimeout(() => {
-      this.senderName = '';
-    }, milliseconds);
-  }
+
 }
