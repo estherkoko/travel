@@ -10,7 +10,7 @@ import { ContactService } from 'src/providers/contact.service';
 export class HomeComponent implements OnInit {
 
   myPlaces:any;
-  constructor(public alegnaPlaceService: AlegnaPlacesService, private contactService: ContactService) { }
+  constructor(public alegnaPlaceService: AlegnaPlacesService, public contactService: ContactService) { }
 
   getPlacesData(){
     this.myPlaces=this.alegnaPlaceService.getPlaces();
