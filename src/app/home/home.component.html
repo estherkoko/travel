@@ -1,57 +1,68 @@
 <div class="tophero text-white">
-  
-  <!-- Content here -->
- <div class="container text-center pt-5">
-   <h1 class="display-3 content-middle ">Time to take a Break</h1>
-   <p class="text-center font-weight-bold h5 spacing">Let's help manage your travel and leisure experience</p>
 
-   <div class="contact-layout py-3">
-      <form class="form-row form-noborder p-4">
-        <div class="form-group col-lg-3 md-12 mb-2">
+  <!-- Content here -->
+  <div class="container text-center pt-5">
+    <h1 class="display-3 content-middle ">Time to take a Break</h1>
+    <p class="text-center font-weight-bold h5 spacing">Let's help manage your travel and leisure experience</p>
+
+    <div class="contact-layout py-3">
+      <div *ngIf="contactService.senderName !== '' && !contactService.isLoading" class="alert alert-warning alert-dismissible fade show"
+        role="alert">
+        <strong>Hi {{contactService.senderName}}</strong> Thanks for your message, we will get back to you very soon!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div [hidden]="!contactService.isLoading" class="text-center p-5">
+        <img src="https://loading.io/spinners/spinner/lg.ajax-spinner-preloader.gif" class="loading-img"/>
+      </div>
+      <div [hidden]="contactService.isLoading">
+        <form (ngSubmit)="onContactSubmit(contactForm)" #contactForm="ngForm" id="contact-form" class="form-row form-noborder p-4">
+          <div class="form-group col-lg-3 md-12 mb-2">
             <label for="fullname" class="sr-only">Fullname</label>
-            <input type="text" class="form-control" id="Fullname" placeholder="Fullname">
+            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Fullname" ngModel required>
           </div>
-        <div class="form-group col-lg-3 md-12 mb-2">
-          <label for="email" class="sr-only">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
-        <div class="form-group col-lg-3 md-12 mb-2">
+          <div class="form-group col-lg-3 md-12 mb-2">
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" class="form-control" id="email" email="true" name="email" placeholder="Email" ngModel required>
+          </div>
+          <div class="form-group col-lg-3 md-12 mb-2">
             <label for="subject" class="sr-only">Subject</label>
-            <input type="text" class="form-control" id="subject" placeholder="Subject">
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" ngModel required>
           </div>
-        
-        <div class="form-group col-lg-9 md-12 mt-3">
+
+          <div class="form-group col-lg-9 md-12 mt-3">
             <label for="message" class="sr-only">Message</label>
-            <input type="text" class="form-control " id="message" placeholder="Message">
+            <input type="text" class="form-control " id="message" name="message" placeholder="Message" ngModel required>
           </div>
           <div class="form-group col-lg-3 mx-p0-sm-12 pb-3 pl-5 text-center ">
-              <button type="submit" class="btn btn-block text-dark font-weight-bold">Let's Talk</button>
-           </div>  
-      </form>
-
-   </div>
-   <div class="row mt-4 services">
+            <button type="submit" [disabled]="!contactForm.valid" class="btn btn-block text-dark font-weight-bold">Let's Talk</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row mt-4 services">
       <div class="col-sm-4 mb-3 text-left">
         01 <span class="font-weight-bold">Flight Booking</span>
         <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor.  
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor.
           Ut enim ad minim veniam
         </p>
       </div>
       <div class="col-sm-4 mb-3 text-left">
         02 <span class="font-weight-bold">Holiday Packages</span>
         <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor.  
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor.
           Ut enim ad minim veniam
         </p>
       </div>
       <div class="col-sm-4 mb-3 text-left">
         03 <span class="font-weight-bold">Accomodation Arrangements</span>
         <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor.  
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor.
           Ut enim ad minim veniam
         </p>
       </div>

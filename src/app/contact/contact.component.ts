@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as emailjs from 'emailjs-com';
 import { ContactService } from 'src/providers/contact.service';
 
 @Component({
@@ -9,8 +8,6 @@ import { ContactService } from 'src/providers/contact.service';
 })
 export class ContactComponent implements OnInit {
 
-  //isLoading: boolean = false;
-  //sendMail: any;
 
   constructor(private contactService: ContactService) { }
 
